@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Creador de Memes</title>
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>
+    <header>
+        <h1>Creador de Memes</h1>
+    </header>
+    <main>
+        <section id="meme-generator">
+            <form id="meme-form">
+                <div class="form-group">
+                    <label for="image-upload">Subir imagen</label>
+                    <input type="file" id="image-upload" accept="image/*">
+                </div>
+                <div class="form-group">
+                    <label for="url-input">O usar imagen desde URL:</label>
+                    <input type="url" id="url-input" placeholder="Enter image URL">
+                </div>
+                <div class="form-group">
+                    <label for="top-text">Texto superior</label>
+                    <input type="text" id="top-text" placeholder="Enter top text">
+                </div>
+                <div class="form-group">
+                    <label for="bottom-text">Texto inferior</label>
+                    <input type="text" id="bottom-text" placeholder="Enter bottom text">
+                </div>
+                <div class="form-group">
+                    <label for="background-color">Color de fondo</label>
+                    <input type="color" id="background-color">
+                </div>
+                <div class="form-group">
+                    <label for="blend-mode">Blend Mode:</label>
+                    <select id="blend-mode">
+                        <option value="normal">Normal</option>
+                        <option value="multiply">Multiply</option>
+                        <option value="screen">Screen</option>
+                        <option value="overlay">Overlay</option>
+                        <option value="darken">Darken</option>
+                        <option value="lighten">Lighten</option>
+                        <option value="color-dodge">Color Dodge</option>
+                        <option value="color-burn">COlor Burn</option>
+                        <option value="hard-light">Hard Ligth</option>
+                        <option value="soft-light">SOft Light</option>
+                        <option value="difference">Difference</option>
+                        <option value="exclusion">Exclusion</option>
+                        <option value="hue">Hue</option>
+                        <option value="saturation">Saturation</option>
+                        <option value="color">Color</option>
+                        <option value="luminosity">Luminosity</option>
+                    </select>
+                </div>
+            <button type="button" id="generate-meme">Generar Meme</button>
+            </form>
+            <canvas id="meme-canvas"></canvas>
+            <div class="button-group">
+                <button id="download-meme">Descargar Meme</button>
+                <button id="toggle-panel">Panel</button>
+                <button id="mode-switch">Modo oscuro</button>
+            </div>
+            <div id="panel" class="panel">
+                <p>Panel</p>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <p>Hecho por Ale</p>
+    </footer>
+    <script src="main.js"></script>
+</body>
+</html>
